@@ -1,0 +1,240 @@
+custom_header:
+  button_text:
+    options: '{{ time }}<br>{{ date }}'
+  compact_mode: true
+ha-card-border-radius: 6px
+preload_cards:
+  - hui-markdown-card
+  - 'custom:mini-graph-card'
+title: Irrigation
+views:
+  - title: IRRIGATION
+    path: irrigation
+    panel: false
+    icon: 'mdi:water-pump'
+    badges: []
+    cards:
+      - card:
+          cards:
+            - aspect_ratio: 50%
+              entity: input_boolean.enable_all_timers
+              image: /community_plugin/sprinkler.jpg
+              tap_action:
+                action: toggle
+              type: picture-entity
+            - card:
+                cards:
+                  - color: 'rgb(223, 255, 97)'
+                    color_type: card
+                    icon: 'mdi:weather-sunny'
+                    tap_action:
+                      action: call-service
+                      service: homeassistant.toggle
+                      service_data:
+                        entity_id: input_boolean.save_settings_morning
+                    type: 'custom:button-card'
+                  - color: 'rgb(223, 255, 97)'
+                    color_type: card
+                    icon: 'mdi:weather-night'
+                    tap_action:
+                      action: call-service
+                      service: homeassistant.toggle
+                      service_data:
+                        entity_id: input_boolean.save_settings_afternoon
+                    type: 'custom:button-card'
+                  - entity: input_datetime.valve1_time
+                    hide:
+                      name: true
+                    hour_mode: 24
+                    hour_step: 1
+                    layout:
+                      align_controls: center
+                      name: header
+                    minute_step: 1
+                    name: V1
+                    type: 'custom:time-picker-card'
+                type: horizontal-stack
+              conditions:
+                - entity: input_boolean.enable_all_timers
+                  state: 'on'
+              type: conditional
+            - card:
+                cards:
+                  - entity: switch.domingo
+                    icon: 'mdi:numeric-1-circle'
+                    name: null
+                    type: button
+                  - color_type: blank-card
+                    entity: switch.segunda
+                    icon: 'mdi:numeric-2-circle'
+                    type: button
+                  - entity: switch.terca
+                    icon: 'mdi:numeric-3-circle'
+                    name: null
+                    type: button
+                  - color_type: blank-card
+                    entity: switch.quarta
+                    icon: 'mdi:numeric-4-circle'
+                    type: button
+                  - entity: switch.quinta
+                    icon: 'mdi:numeric-5-circle'
+                    name: null
+                    type: button
+                  - color_type: blank-card
+                    entity: switch.sexta
+                    icon: 'mdi:numeric-6-circle'
+                    type: button
+                  - color_type: blank-card
+                    entity: switch.sabado
+                    icon: 'mdi:numeric-7-circle'
+                    type: button
+                type: horizontal-stack
+              conditions:
+                - entity: input_boolean.enable_all_timers
+                  state: 'on'
+              type: conditional
+            - card:
+                entities:
+                  - entity: input_select.select_valve_for_timer
+                  - entity: input_number.watering_time_minutes
+                    icon: 'mdi:timer-sand'
+                    name: Duration (in minutes)
+                show_header_toggle: false
+                title: null
+                type: entities
+              conditions:
+                - entity: input_boolean.enable_all_timers
+                  state: 'on'
+              type: conditional
+            - card:
+                cards:
+                  - clickable: true
+                    columns:
+                      - align: center
+                        data: designation
+                        name: name
+                    entities:
+                      exclude: sensor.mqtt_v*time
+                      include: sensor.mqtt_valve_*_afternoon_status
+                    type: 'custom:flex-table-card'
+                  - clickable: true
+                    columns:
+                      - align: center
+                        data: name
+                        hidden: true
+                        name: yesterday
+                      - align: center
+                        data: value
+                        hidden: false
+                        name: yesterday
+                    entities:
+                      exclude: sensor.mqtt_v*time
+                      include: sensor.irrigation_zone*yesterday
+                    sort_by: name
+                    type: 'custom:flex-table-card'
+                  - clickable: true
+                    columns:
+                      - align: center
+                        data: value
+                        name: today
+                      - align: center
+                        data: name
+                        hidden: true
+                        name: name
+                    entities:
+                      exclude: sensor.mqtt_v*time
+                      include: sensor.irrigation_zone*today
+                    sort_by: name
+                    type: 'custom:flex-table-card'
+                type: horizontal-stack
+              conditions:
+                - entity: input_boolean.enable_all_timers
+                  state: 'on'
+              type: conditional
+          type: vertical-stack
+        conditions: []
+        type: conditional
+      - type: conditional
+        conditions:
+          - entity: input_boolean.enable_all_timers
+            state: 'on'
+        card:
+          clickable: true
+          columns:
+            - align: center
+              data: designation
+              name: name
+            - align: center
+              data: hora
+              name: hora
+            - align: center
+              data: duration
+              name: durat
+            - align: center
+              data: domingo
+              name: dom
+            - align: center
+              data: segunda
+              name: seg
+            - align: center
+              data: terca
+              name: ter
+            - align: center
+              data: quarta
+              name: qua
+            - align: center
+              data: quinta
+              name: qui
+            - align: center
+              data: sexta
+              name: sex
+            - align: center
+              data: sabado
+              name: sab
+          entities:
+            exclude: sensor.mqtt_v*time
+            include: sensor.mqtt_v*morning*
+          title: Morning Cycle schedulle
+          type: 'custom:flex-table-card'
+      - type: conditional
+        conditions:
+          - entity: input_boolean.enable_all_timers
+            state: 'on'
+        card:
+          clickable: true
+          columns:
+            - align: center
+              data: designation
+              name: name
+            - align: center
+              data: hora
+              name: hora
+            - align: center
+              data: duration
+              name: durat
+            - align: center
+              data: domingo
+              name: dom
+            - align: center
+              data: segunda
+              name: seg
+            - align: center
+              data: terca
+              name: ter
+            - align: center
+              data: quarta
+              name: qua
+            - align: center
+              data: quinta
+              name: qui
+            - align: center
+              data: sexta
+              name: sex
+            - align: center
+              data: sabado
+              name: sab
+          entities:
+            exclude: sensor.mqtt_v*time
+            include: sensor.mqtt_v*afternoon*
+          title: Afternoon Cycle schedulle
+          type: 'custom:flex-table-card'
