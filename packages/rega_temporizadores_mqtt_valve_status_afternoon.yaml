@@ -1,0 +1,812 @@
+sensor:
+
+###############################################################################
+#                          Afternoon Cycle                                    #
+###############################################################################
+
+  - platform: template
+    sensors:
+      mqtt_valve_01_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_1_timer5', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_1_timer5', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer5', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_1_timer13', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_1_timer5', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_1_timer13', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_1_timer5', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V1"
+
+  - platform: template
+    sensors:
+      mqtt_valve_02_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_1_timer6', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_1_timer6', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer6', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_1_timer14', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_1_timer6', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_1_timer14', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_1_timer6', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V2"
+
+  - platform: template
+    sensors:
+      mqtt_valve_03_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_1_timer7', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_1_timer7', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer7', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_1_timer15', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_1_timer7', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_1_timer15', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_1_timer7', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V3"
+
+  - platform: template
+    sensors:
+      mqtt_valve_04_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_1_timer8', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_1_timer8', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_1_timer8', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_1_timer16', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_1_timer8', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_1_timer16', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_1_timer8', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V4"
+
+
+  - platform: template
+    sensors:
+      mqtt_valve_05_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_2_timer5', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_2_timer5', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer5', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_2_timer13', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_2_timer5', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_2_timer13', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_2_timer5', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V5"
+
+  - platform: template
+    sensors:
+      mqtt_valve_06_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_2_timer6', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_2_timer6', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer6', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_2_timer14', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_2_timer6', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_2_timer14', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_2_timer6', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V6"
+
+  - platform: template
+    sensors:
+      mqtt_valve_07_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_2_timer7', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_2_timer7', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer7', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_2_timer15', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_2_timer7', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_2_timer15', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_2_timer7', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V7"
+
+  - platform: template
+    sensors:
+      mqtt_valve_08_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_2_timer8', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_2_timer8', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_2_timer8', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_2_timer16', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_2_timer8', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_2_timer16', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_2_timer8', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V8"
+
+  - platform: template
+    sensors:
+      mqtt_valve_09_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_3_timer5', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_3_timer5', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer5', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_3_timer13', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_3_timer5', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_3_timer13', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_3_timer5', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V9"
+
+  - platform: template
+    sensors:
+      mqtt_valve_10_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_3_timer6', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_3_timer6', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer6', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_3_timer14', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_3_timer6', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_3_timer14', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_3_timer6', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V10"
+
+  - platform: template
+    sensors:
+      mqtt_valve_11_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_3_timer7', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_3_timer7', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer7', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_3_timer15', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_3_timer7', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_3_timer15', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_3_timer7', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V11"
+
+  - platform: template
+    sensors:
+      mqtt_valve_12_afternoon_status:
+        value_template: "{{ state_attr('sensor.mqtt_sonoff_3_timer8', 'Time') }}"
+        attribute_templates: 
+          hora: "{{ state_attr('sensor.mqtt_sonoff_3_timer8', 'Time') }}"
+          domingo: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[0:1] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          segunda: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[1:2] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          terca: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[2:3] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quarta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[3:4] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          quinta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[4:5] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sexta: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[5:6] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          sabado: >
+            {% if state_attr('sensor.mqtt_sonoff_3_timer8', 'Days')[6:7] == "1" %}
+              {% set section = "X" %}
+            {% else %}
+              {% set section = "" %}
+            {% endif %}
+            {{ section }}
+          duration: >
+            {% set sectiona = strptime(state_attr('sensor.mqtt_sonoff_3_timer16', 'Time'), '%H:%M').hour - strptime(state_attr('sensor.mqtt_sonoff_3_timer8', 'Time'), '%H:%M').hour %}
+            {% set sectionb = strptime(state_attr('sensor.mqtt_sonoff_3_timer16', 'Time'), '%H:%M').minute - strptime(state_attr('sensor.mqtt_sonoff_3_timer8', 'Time'), '%H:%M').minute %}
+            {% set sectionc = sectiona*60 + sectionb %}
+            {% if sectionc < 0 %}
+              {% set section = sectionc+1440 %}
+            {% else %}
+              {% set section = sectionc %}
+            {% endif %}
+            {{ section  }}
+          designation: "V12"
+
+

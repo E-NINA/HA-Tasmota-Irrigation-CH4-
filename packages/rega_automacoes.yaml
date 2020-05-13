@@ -1,0 +1,1049 @@
+automation:
+
+##########################################################################################
+#     Check Power Status on startup for Sonoff Devices
+##########################################################################################
+  - alias: "Power state on HA start-up"
+    trigger:
+      platform: homeassistant
+      event: start
+    action:
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/power1"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/power2"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/Power3"
+          payload: "" 
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/power4"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/power1"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/power2"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/Power3"
+          payload: "" 
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/power4"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/power1"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/power2"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/Power3"
+          payload: "" 
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/power4"
+          payload: ""
+##########################################################################################
+#      Check Power Timers on startup for Sonoff Devices
+##########################################################################################
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer1"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer2"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer3"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer4"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer5"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer6"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer7"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer8"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer9"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer10"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer11"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer12"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer13"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer14"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer15"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_1/timer16"
+          payload: ""
+
+
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer1"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer2"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer3"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer4"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer5"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer6"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer7"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer8"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer9"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer10"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer11"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer12"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer13"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer14"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer15"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_2/timer16"
+          payload: ""
+
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer1"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer2"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer3"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer4"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer5"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer6"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer7"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer8"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer9"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer10"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer11"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer12"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer13"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer14"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer15"
+          payload: ""
+      - service: mqtt.publish
+        data:
+          topic: "cmnd/sonoff_3/timer16"
+          payload: ""
+
+
+
+##########################################################################################
+##########################################################################################
+####
+####  Setup timers - morning cycle - switch ON
+####
+##########################################################################################
+##########################################################################################
+  - alias: "setup_timers"
+    trigger:
+      platform: state
+      entity_id: input_boolean.save_settings_morning
+#      to: 'on'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "{{ states('sensor.morning_timer_selector') }}"
+          payload_template: >
+            {% set sectiona = "{'Arm':1,'Time':'" %}
+            {% set sectionb = "','Window':0,'Days': '" %}
+            {% set sectionc = "','Repeat':1,'Output':" %}
+            {% set sectiond = ",'Action':" %}
+            {% set sectione = "}" %}
+            {% if is_state('switch.domingo', 'on') %}
+              {% set section1 = "1" %}
+            {% else %}
+              {% set section1 = "0" %}
+            {% endif %}
+            {% if is_state('switch.segunda', 'on') %}
+              {% set section2 = "1" %}
+            {% else %}
+              {% set section2 = "0" %}
+            {% endif %}
+            {% if is_state('switch.terca', 'on') %}
+              {% set section3 = "1" %}
+            {% else %}
+              {% set section3 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quarta', 'on') %}
+              {% set section4 = "1" %}
+            {% else %}
+              {% set section4 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quinta', 'on') %}
+              {% set section5 = "1" %}
+            {% else %}
+              {% set section5 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sexta', 'on') %}
+              {% set section6 = "1" %}
+            {% else %}
+              {% set section6 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sabado', 'on') %}
+              {% set section7 = "1" %}
+            {% else %}
+              {% set section7 = "0" %}
+            {% endif %}
+            {% set sectionoutput = states('sensor.sonoff_1_valve_selector') %}
+            {{ sectiona + states('input_datetime.valve1_time') + sectionb + section1 + section2 + section3 + section4 + section5 + section6 + section7 + sectionc + sectionoutput + sectiond + "1" + sectione }}
+
+
+##########################################################################################
+##########################################################################################
+####
+####  Setup timers - morning cycle - switch OFF
+####
+##########################################################################################
+##########################################################################################
+  - alias: "setup_timers_desliga"
+    trigger:
+      platform: state
+      entity_id: input_boolean.save_settings_morning
+#      to: 'on'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "{{ states('sensor.morning_timer_selector_off') }}"
+          payload_template: >
+            {% set sectiona = "{'Arm':1,'Time':'" %}
+            {% set sectionb = "','Window':0,'Days': '" %}
+            {% set sectionc = "','Repeat':1,'Output':" %}
+            {% set sectiond = ",'Action':" %}
+            {% set sectione = "}" %}
+            {% if is_state('switch.domingo', 'on') %}
+              {% set section1 = "1" %}
+            {% else %}
+              {% set section1 = "0" %}
+            {% endif %}
+            {% if is_state('switch.segunda', 'on') %}
+              {% set section2 = "1" %}
+            {% else %}
+              {% set section2 = "0" %}
+            {% endif %}
+            {% if is_state('switch.terca', 'on') %}
+              {% set section3 = "1" %}
+            {% else %}
+              {% set section3 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quarta', 'on') %}
+              {% set section4 = "1" %}
+            {% else %}
+              {% set section4 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quinta', 'on') %}
+              {% set section5 = "1" %}
+            {% else %}
+              {% set section5 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sexta', 'on') %}
+              {% set section6 = "1" %}
+            {% else %}
+              {% set section6 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sabado', 'on') %}
+              {% set section7 = "1" %}
+            {% else %}
+              {% set section7 = "0" %}
+            {% endif %}
+            {% set sectionoutput = states('sensor.sonoff_1_valve_selector') %}
+            {{ sectiona + ((state_attr('input_datetime.valve1_time', 'timestamp') | int + (states('input_number.watering_time_minutes') | int * 60)-3600) | timestamp_custom('%H:%M', true)) + sectionb + section1 + section2 + section3 + section4 + section5 + section6 + section7 + sectionc + sectionoutput + sectiond + "0" + sectione }}
+
+
+
+##########################################################################################
+##########################################################################################
+####
+####  Setup timers - afternoon cycle - switch ON
+####
+##########################################################################################
+##########################################################################################
+  - alias: "setup_timers"
+    trigger:
+      platform: state
+      entity_id: input_boolean.save_settings_afternoon
+#      to: 'on'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "{{ states('sensor.afternoon_timer_selector') }}"
+          payload_template: >
+            {% set sectiona = "{'Arm':1,'Time':'" %}
+            {% set sectionb = "','Window':0,'Days': '" %}
+            {% set sectionc = "','Repeat':1,'Output':" %}
+            {% set sectiond = ",'Action':" %}
+            {% set sectione = "}" %}
+            {% if is_state('switch.domingo', 'on') %}
+              {% set section1 = "1" %}
+            {% else %}
+              {% set section1 = "0" %}
+            {% endif %}
+            {% if is_state('switch.segunda', 'on') %}
+              {% set section2 = "1" %}
+            {% else %}
+              {% set section2 = "0" %}
+            {% endif %}
+            {% if is_state('switch.terca', 'on') %}
+              {% set section3 = "1" %}
+            {% else %}
+              {% set section3 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quarta', 'on') %}
+              {% set section4 = "1" %}
+            {% else %}
+              {% set section4 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quinta', 'on') %}
+              {% set section5 = "1" %}
+            {% else %}
+              {% set section5 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sexta', 'on') %}
+              {% set section6 = "1" %}
+            {% else %}
+              {% set section6 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sabado', 'on') %}
+              {% set section7 = "1" %}
+            {% else %}
+              {% set section7 = "0" %}
+            {% endif %}
+            {% set sectionoutput = states('sensor.sonoff_1_valve_selector') %}
+            {{ sectiona + states('input_datetime.valve1_time') + sectionb + section1 + section2 + section3 + section4 + section5 + section6 + section7 + sectionc + sectionoutput + sectiond + "1" + sectione }}
+
+
+##########################################################################################
+##########################################################################################
+####
+####  Setup timers - afternoon cycle - switch OFF
+####
+##########################################################################################
+##########################################################################################
+  - alias: "setup_timers_desliga"
+    trigger:
+      platform: state
+      entity_id: input_boolean.save_settings_afternoon
+#      to: 'on'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: "{{ states('sensor.afternoon_timer_selector_off') }}"
+          payload_template: >
+            {% set sectiona = "{'Arm':1,'Time':'" %}
+            {% set sectionb = "','Window':0,'Days': '" %}
+            {% set sectionc = "','Repeat':1,'Output':" %}
+            {% set sectiond = ",'Action':" %}
+            {% set sectione = "}" %}
+            {% if is_state('switch.domingo', 'on') %}
+              {% set section1 = "1" %}
+            {% else %}
+              {% set section1 = "0" %}
+            {% endif %}
+            {% if is_state('switch.segunda', 'on') %}
+              {% set section2 = "1" %}
+            {% else %}
+              {% set section2 = "0" %}
+            {% endif %}
+            {% if is_state('switch.terca', 'on') %}
+              {% set section3 = "1" %}
+            {% else %}
+              {% set section3 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quarta', 'on') %}
+              {% set section4 = "1" %}
+            {% else %}
+              {% set section4 = "0" %}
+            {% endif %}
+            {% if is_state('switch.quinta', 'on') %}
+              {% set section5 = "1" %}
+            {% else %}
+              {% set section5 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sexta', 'on') %}
+              {% set section6 = "1" %}
+            {% else %}
+              {% set section6 = "0" %}
+            {% endif %}
+            {% if is_state('switch.sabado', 'on') %}
+              {% set section7 = "1" %}
+            {% else %}
+              {% set section7 = "0" %}
+            {% endif %}
+            {% set sectionoutput = states('sensor.sonoff_1_valve_selector') %}
+            {{ sectiona + ((state_attr('input_datetime.valve1_time', 'timestamp') | int + (states('input_number.watering_time_minutes') | int * 60)-3600) | timestamp_custom('%H:%M', true)) + sectionb + section1 + section2 + section3 + section4 + section5 + section6 + section7 + sectionc + sectionoutput + sectiond + "0" + sectione }}
+
+
+
+##########################################################################################
+##########################################################################################
+####
+####  Setup timers - Enable / Disable all timers
+####
+##########################################################################################
+##########################################################################################
+
+  - alias: "setup_timers_enable"
+    trigger:
+      platform: state
+      entity_id: input_boolean.enable_all_timers
+      to: 'on'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: cmnd/sonoff_1/Timers
+          payload_template: "1"
+      - service: mqtt.publish
+        data_template:
+          topic: cmnd/sonoff_2/Timers
+          payload_template: "1"
+      - service: mqtt.publish
+        data_template:
+          topic: cmnd/sonoff_3/Timers
+          payload_template: "1"
+
+
+  - alias: "setup_timers_disable"
+    trigger:
+      platform: state
+      entity_id: input_boolean.enable_all_timers
+      to: 'off'
+    action:
+      - service: mqtt.publish
+        data_template:
+          topic: cmnd/sonoff_1/Timers
+          payload_template: "0"
+      - service: mqtt.publish
+        data_template:
+          topic: cmnd/sonoff_2/Timers
+          payload_template: "0"
+      - service: mqtt.publish
+        data_template:
+          topic: cmnd/sonoff_3/Timers
+          payload_template: "0"
+
+
+
+#===================
+#=== Input_Booleans
+#===================
+input_boolean:
+
+  save_settings_morning:
+    name: save settings morning
+    icon: mdi:weather-sunny
+
+  save_settings_afternoon:
+    name: save settings afternoon
+    icon: mdi:weather-night
+
+
+  enable_all_timers:
+    name: enable all timers
+    icon: mdi:pipe
+
+  disable_all_timers:
+    name: disable all timers
+    icon: mdi:pipe
+
+
+
+sensor:
+
+
+#=========================================
+#=== Input_sensors Morning
+#=========================================
+
+
+  - platform: template
+    sensors:
+      morning_timer_selector:
+        value_template: >
+          {% set mapper =
+            { '1':'cmnd/sonoff_1/Timer1',
+              '2':'cmnd/sonoff_1/Timer2',
+              '3':'cmnd/sonoff_1/Timer3',
+              '4':'cmnd/sonoff_1/Timer4',
+              '5':'cmnd/sonoff_2/Timer1',
+              '6':'cmnd/sonoff_2/Timer2',
+              '7':'cmnd/sonoff_2/Timer3',
+              '8':'cmnd/sonoff_2/Timer4',
+              '9':'cmnd/sonoff_3/Timer1',
+              '10':'cmnd/sonoff_3/Timer2',
+              '11':'cmnd/sonoff_3/Timer3',
+              '12':'cmnd/sonoff_3/Timer4' } %}
+          {% set state = states('input_select.select_valve_for_timer') %}
+          {% set id = mapper[state] if state in mapper %}
+          {{ id }}
+
+  - platform: template
+    sensors:
+      morning_timer_selector_off:
+        value_template: >
+          {% set mapper =
+            { '1':'cmnd/sonoff_1/Timer9',
+              '2':'cmnd/sonoff_1/Timer10',
+              '3':'cmnd/sonoff_1/Timer11',
+              '4':'cmnd/sonoff_1/Timer12',
+              '5':'cmnd/sonoff_2/Timer9',
+              '6':'cmnd/sonoff_2/Timer10',
+              '7':'cmnd/sonoff_2/Timer11',
+              '8':'cmnd/sonoff_2/Timer12',
+              '9':'cmnd/sonoff_3/Timer9',
+              '10':'cmnd/sonoff_3/Timer10',
+              '11':'cmnd/sonoff_3/Timer11',
+              '12':'cmnd/sonoff_3/Timer12' } %}
+          {% set state = states('input_select.select_valve_for_timer') %}
+          {% set id = mapper[state] if state in mapper %}
+          {{ id }}
+
+
+#=========================================
+#=== Input_sensors afternoon
+#=========================================
+
+
+  - platform: template
+    sensors:
+      afternoon_timer_selector:
+        value_template: >
+          {% set mapper =
+            { '1':'cmnd/sonoff_1/Timer5',
+              '2':'cmnd/sonoff_1/Timer6',
+              '3':'cmnd/sonoff_1/Timer7',
+              '4':'cmnd/sonoff_1/Timer8',
+              '5':'cmnd/sonoff_2/Timer5',
+              '6':'cmnd/sonoff_2/Timer6',
+              '7':'cmnd/sonoff_2/Timer7',
+              '8':'cmnd/sonoff_2/Timer8',
+              '9':'cmnd/sonoff_3/Timer5',
+              '10':'cmnd/sonoff_3/Timer6',
+              '11':'cmnd/sonoff_3/Timer7',
+              '12':'cmnd/sonoff_3/Timer8' } %}
+          {% set state = states('input_select.select_valve_for_timer') %}
+          {% set id = mapper[state] if state in mapper %}
+          {{ id }}
+
+  - platform: template
+    sensors:
+      afternoon_timer_selector_off:
+        value_template: >
+          {% set mapper =
+            { '1':'cmnd/sonoff_1/Timer13',
+              '2':'cmnd/sonoff_1/Timer14',
+              '3':'cmnd/sonoff_1/Timer15',
+              '4':'cmnd/sonoff_1/Timer16',
+              '5':'cmnd/sonoff_2/Timer13',
+              '6':'cmnd/sonoff_2/Timer14',
+              '7':'cmnd/sonoff_2/Timer15',
+              '8':'cmnd/sonoff_2/Timer16',
+              '9':'cmnd/sonoff_3/Timer13',
+              '10':'cmnd/sonoff_3/Timer14',
+              '11':'cmnd/sonoff_3/Timer15',
+              '12':'cmnd/sonoff_3/Timer16' } %}
+          {% set state = states('input_select.select_valve_for_timer') %}
+          {% set id = mapper[state] if state in mapper %}
+          {{ id }}
+
+
+
+#============================================================================
+#=== selects output (on Sonoff CH4 relay1 -> 1;  relay2 -> 2 ...etc
+#============================================================================
+
+  - platform: template
+    sensors:
+      sonoff_1_valve_selector:
+        value_template: >
+          {% set mapper =
+            { '1':'1',
+              '2':'2',
+              '3':'3',
+              '4':'4',
+              '5':'1',
+              '6':'2',
+              '7':'3',
+              '8':'4',
+              '9':'1',
+              '10':'2',
+              '11':'3',
+              '12':'4' } %}
+          {% set state = states('input_select.select_valve_for_timer') %}
+          {% set id = mapper[state] if state in mapper %}
+          {{ id }}
+
+
+#============================================================================
+#=== Sensor morning cycle start/end
+#============================================================================
+
+
+  - platform: template
+    sensors:
+      morning_cycle_start:
+        value_template: >
+          {% set section = strptime(state_attr('sensor.mqtt_sonoff_1_timer1', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer2', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer3', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer4', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer1', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer2', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer3', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer4', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer1', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer2', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer3', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer2', 'Time'), '%H:%M')%}
+          {% set section = section|min %}
+          {% set section = section.hour*60 + section.minute %}
+          {{ (section*60 )| timestamp_custom('%H:%M', false) }} 
+
+
+  - platform: template
+    sensors:
+      morning_cycle_end:
+        value_template: >
+          {% set section = strptime(state_attr('sensor.mqtt_sonoff_1_timer9', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer10', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer11', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer12', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer9', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer10', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer11', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer12', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer9', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer10', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer11', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer12', 'Time'), '%H:%M')%}
+          {% set section = section|max %}
+          {% set section = section.hour*60 + section.minute %}
+          {{ (section*60 )| timestamp_custom('%H:%M', false) }} 
+
+
+
+#============================================================================
+#=== Sensor afternoon cycle start/end
+#============================================================================
+
+
+  - platform: template
+    sensors:
+      afternoon_cycle_start:
+        value_template: >
+          {% set section = strptime(state_attr('sensor.mqtt_sonoff_1_timer5', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer6', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer7', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer8', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer5', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer6', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer7', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer8', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer5', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer6', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer7', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer8', 'Time'), '%H:%M')%}
+          {% set section = section|min %}
+          {% set section = section.hour*60 + section.minute %}
+          {{ (section*60 )| timestamp_custom('%H:%M', false) }} 
+
+
+  - platform: template
+    sensors:
+      afternoon_cycle_end:
+        value_template: >
+          {% set section = strptime(state_attr('sensor.mqtt_sonoff_1_timer13', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer14', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer15', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_1_timer16', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer13', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer14', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer15', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_2_timer16', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer13', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer14', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer15', 'Time'), '%H:%M'),
+                           strptime(state_attr('sensor.mqtt_sonoff_3_timer16', 'Time'), '%H:%M')%}
+          {% set section = section|max %}
+          {% set section = section.hour*60 + section.minute %}
+          {{ (section*60 )| timestamp_custom('%H:%M', false) }} 
+
+
+
+#=================================
+#=== Zone History Sensors - TODAY
+#=================================
+
+  - platform: history_stats
+    name: irrigation_zone01_total_time_today
+    entity_id:  switch.sonoff_1_1
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone02_total_time_today
+    entity_id:  switch.sonoff_1_2
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone03_total_time_today
+    entity_id:  switch.sonoff_1_3
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone04_total_time_today
+    entity_id:  switch.sonoff_1_4
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone05_total_time_today
+    entity_id:  switch.sonoff_2_1
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone06_total_time_today
+    entity_id:  switch.sonoff_2_2
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone07_total_time_today
+    entity_id:  switch.sonoff_2_3
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone08_total_time_today
+    entity_id:  switch.sonoff_2_4
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone09_total_time_today
+    entity_id:  switch.sonoff_3_1
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone10_total_time_today
+    entity_id:  switch.sonoff_3_2
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone11_total_time_today
+    entity_id:  switch.sonoff_3_3
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+  - platform: history_stats
+    name: irrigation_zone12_total_time_today
+    entity_id:  switch.sonoff_3_4
+    state: 'on'
+    type: time
+    start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    end: '{{ now() }}'
+
+
+#=================================
+#=== Zone History Sensors - Yesterday
+#=================================
+
+  - platform: history_stats
+    name: irrigation_zone01_total_time_Yesterday
+    entity_id:  switch.sonoff_1_1
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone02_total_time_Yesterday
+    entity_id:  switch.sonoff_1_2
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone03_total_time_Yesterday
+    entity_id:  switch.sonoff_1_3
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone04_total_time_Yesterday
+    entity_id:  switch.sonoff_1_4
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone05_total_time_Yesterday
+    entity_id:  switch.sonoff_2_1
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone06_total_time_Yesterday
+    entity_id:  switch.sonoff_2_2
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone07_total_time_Yesterday
+    entity_id:  switch.sonoff_2_3
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone08_total_time_Yesterday
+    entity_id:  switch.sonoff_2_4
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone09_total_time_Yesterday
+    entity_id:  switch.sonoff_3_1
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone10_total_time_Yesterday
+    entity_id:  switch.sonoff_3_2
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone11_total_time_Yesterday
+    entity_id:  switch.sonoff_3_3
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+  - platform: history_stats
+    name: irrigation_zone12_total_time_Yesterday
+    entity_id:  switch.sonoff_3_4
+    state: 'on'
+    type: time
+    end: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+    duration:
+      hours: 24
+
+
+#===================
+#=== Input_select
+#===================
+
+
+input_select:
+  select_valve_for_timer:
+    options: 
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      - '7'
+      - '8'
+      - '9'
+      - '10'
+      - '11'
+      - '12'
+
+
+
+#===================
+#=== Input_number
+#===================
+
+input_number:
+  watering_time_minutes:
+    name: Slider
+    initial: 30
+    min: 0
+    max: 300
+    step: 1
+
+
+#===================
+#=== Input_time
+#===================
+
+
+input_datetime:
+  valve1_time:
+    name: valve1 time
+    has_date: false
+    has_time: true
