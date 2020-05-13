@@ -1,0 +1,539 @@
+###############################################################################
+#                                                                             #
+#                           S W I T C H  S O N O F F                          #
+#                                                                             #
+###############################################################################
+
+switch: 
+  - platform: mqtt
+    name: "Sonoff_1_1"
+    state_topic: "stat/sonoff_1/POWER1"
+    command_topic: "cmnd/sonoff_1/POWER1"
+    availability_topic: "tele/sonoff_1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_1_2"
+    state_topic: "stat/sonoff_1/POWER2"
+    command_topic: "cmnd/sonoff_1/POWER2"
+    availability_topic: "tele/sonoff_1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_1_3"
+    state_topic: "stat/sonoff_1/POWER3"
+    command_topic: "cmnd/sonoff_1/POWER3"
+    availability_topic: "tele/sonoff_1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_1_4"
+    state_topic: "stat/sonoff_1/POWER4"
+    command_topic: "cmnd/sonoff_1/POWER4"
+    availability_topic: "tele/sonoff_1/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_2_1"
+    state_topic: "stat/sonoff_2/POWER1"
+    command_topic: "cmnd/sonoff_2/POWER1"
+    availability_topic: "tele/sonoff_2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_2_2"
+    state_topic: "stat/sonoff_2/POWER2"
+    command_topic: "cmnd/sonoff_2/POWER2"
+    availability_topic: "tele/sonoff_2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_2_3"
+    state_topic: "stat/sonoff_2/POWER3"
+    command_topic: "cmnd/sonoff_2/POWER3"
+    availability_topic: "tele/sonoff_2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_2_4"
+    state_topic: "stat/sonoff_2/POWER4"
+    command_topic: "cmnd/sonoff_2/POWER4"
+    availability_topic: "tele/sonoff_2/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_3_1"
+    state_topic: "stat/sonoff_3/POWER1"
+    command_topic: "cmnd/sonoff_3/POWER1"
+    availability_topic: "tele/sonoff_3/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Conetado"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_3_2"
+    state_topic: "stat/sonoff_3/POWER2"
+    command_topic: "cmnd/sonoff_3/POWER2"
+    availability_topic: "tele/sonoff_3/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Conetado"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_3_3"
+    state_topic: "stat/sonoff_3/POWER3"
+    command_topic: "cmnd/sonoff_3/POWER3"
+    availability_topic: "tele/sonoff_3/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Conetado"
+    payload_not_available: "Offline"
+    retain: false
+
+  - platform: mqtt
+    name: "Sonoff_3_4"
+    state_topic: "stat/sonoff_3/POWER4"
+    command_topic: "cmnd/sonoff_3/POWER4"
+    availability_topic: "tele/sonoff_3/LWT"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    payload_available: "Conetado"
+    payload_not_available: "Offline"
+    retain: false
+
+
+###############################################################################
+#                                                                             #
+#                           S W I T C H  D I A S                              #
+#                                                                             #
+###############################################################################
+
+  - platform: mqtt
+    name: "Domingo"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0" 
+  - platform: mqtt
+    name: "Segunda"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Terca"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Quarta"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Quinta"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Sexta"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0"
+  - platform: mqtt
+    name: "Sabado"
+    command_topic: "cmnd/"
+    payload_on: "1"
+    payload_off: "0"
+
+###############################################################################
+#                                                                             #
+#                           S W I T C H  T I M E R S                          #
+#                                                                             #
+###############################################################################
+
+
+### Apeguei
+
+
+###############################################################################
+#                                                                             #
+#                           T I M E R                                         #
+#                                                                             #
+###############################################################################
+
+input_text:
+  valve_timer:
+    name: Valve timer
+    initial: '16:00'
+    pattern: '^[0-9]{1,2}:[0-9]{1,2}$'
+
+
+
+
+
+
+###############################################################################
+#                                                                             #
+#                           S E N S O R                                       #
+#                                                                             #
+###############################################################################
+
+
+sensor:
+
+
+###############################################################################
+#                           sonoff_1                                          #
+###############################################################################
+
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer1"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer1.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer1 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer2"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer2.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer2 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer3"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer3.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer3 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer4"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer4.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer4 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer5"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer5.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer5 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer6"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer6.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer6 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer7"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer7.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer7 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer8"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer8.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer8 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer9"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer9.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer9 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer10"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer10.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer10 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer11"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer11.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer11 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer12"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer12.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer12 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer13"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer13.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer13 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer14"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer14.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer14 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer15"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer15.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer15 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_1_timer16"
+    state_topic: "stat/sonoff_1/RESULT"
+    value_template: "{{ value_json.Timer16.Time }}"
+    json_attributes_topic: "stat/sonoff_1/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer16 | tojson }}"
+
+###############################################################################
+#                           sonoff_2                                          #
+###############################################################################
+
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer1"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer1.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer1 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer2"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer2.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer2 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer3"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer3.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer3 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer4"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer4.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer4 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer5"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer5.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer5 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer6"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer6.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer6 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer7"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer7.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer7 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer8"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer8.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer8 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer9"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer9.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer9 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer10"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer10.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer10 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer11"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer11.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer11 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer12"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer12.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer12 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer13"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer13.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer13 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer14"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer14.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer14 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer15"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer15.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer15 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_2_timer16"
+    state_topic: "stat/sonoff_2/RESULT"
+    value_template: "{{ value_json.Timer16.Time }}"
+    json_attributes_topic: "stat/sonoff_2/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer16 | tojson }}"
+
+###############################################################################
+#                           sonoff_3                                          #
+###############################################################################
+
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer1"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer1.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer1 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer2"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer2.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer2 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer3"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer3.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer3 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer4"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer4.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer4 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer5"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer5.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer5 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer6"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer6.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer6 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer7"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer7.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer7 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer8"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer8.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer8 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer9"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer9.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer9 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer10"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer10.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer10 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer11"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer11.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer11 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer12"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer12.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer12 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer13"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer13.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer13 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer14"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer14.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer14 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer15"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer15.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer15 | tojson }}"
+  - platform: mqtt
+    name: "mqtt_sonoff_3_timer16"
+    state_topic: "stat/sonoff_3/RESULT"
+    value_template: "{{ value_json.Timer16.Time }}"
+    json_attributes_topic: "stat/sonoff_3/RESULT" #< ----- CHANGE THIS TO YOUR DEVICE TOPIC.
+    json_attributes_template: "{{ value_json.Timer16 | tojson }}"
+
+
+
+
+
+
