@@ -18,9 +18,7 @@ This is beta version
 ### Screenshots: ###
 
 
-<img src="https://github.com/E-NINA/HA-Tasmota-Irrigation-CH4-/blob/master/img/Irrigation.jpg" height="330"></br>
-<p align="center">
-  <img src="https://github.com/E-NINA/HA-Tasmota-Irrigation-CH4-/blob/master/img/Picture2.png"></br>
+  <img src="https://github.com/E-NINA/HA-Tasmota-Irrigation-CH4-/blob/master/img/Irrigation.png"></br>
   <i>live page example (extended) screenshot</i>
 </p>
 
